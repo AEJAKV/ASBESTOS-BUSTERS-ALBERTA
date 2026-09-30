@@ -1,0 +1,5 @@
+Open prairieclear-website/README.md for setup.
+Open prairieclear-website/index.html to preview.
+Upload the CONTENTS of prairieclear-website to your GitHub repository, not this ZIP.
+Connect your own Formspree endpoint in assets/js/config.js before accepting enquiries.
+PrairieClear Environmental is an editable working brand name.
