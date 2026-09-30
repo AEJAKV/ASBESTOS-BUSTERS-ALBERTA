@@ -1,6 +1,6 @@
-# PrairieClear Environmental — Alberta website
+# A1 Asbestos Buster — Alberta website
 
-A complete, editable HTML/CSS/vanilla JavaScript website. No framework, package installation or build step is required. The working brand name is **PrairieClear Environmental**; replace it with your chosen business name before launch.
+A complete, editable HTML/CSS/vanilla JavaScript website. No framework, package installation or build step is required. The working brand name is **A1 Asbestos Buster**; replace it with your chosen business name before launch.
 
 ## Open it locally
 
@@ -44,7 +44,7 @@ This is a static website. GitHub and Vercel hosting alone do not provide an emai
 ## Edit the website
 
 - Copy and page content: edit the corresponding `.html` file.
-- Business name: find and replace `PrairieClear` / `PrairieClear Environmental` in all HTML files, plus the form subject in `assets/js/main.js`.
+- Business name: find and replace `A1 Asbestos Buster` / `A1 Asbestos Buster` in all HTML files, plus the form subject in `assets/js/main.js`.
 - Colours: edit the custom properties at the top of `assets/css/styles.css`.
 - Form destination: `assets/js/config.js`.
 - Images: replace the WebP files in `assets/images`, keeping the filenames or updating the HTML references.

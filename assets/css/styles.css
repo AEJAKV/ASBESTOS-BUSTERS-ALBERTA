@@ -11,7 +11,7 @@
 @media(max-width:800px){.hero{min-height:680px}}
 @media(max-width:540px){.hero{min-height:665px}.nav-wrap{gap:12px}.brand{font-size:1.3rem}}
 
-/* Asbestos Busters brand mark */
+/* A1 Asbestos Buster brand mark */
 .brand-logo{width:clamp(150px,16vw,195px);height:auto;object-fit:contain}
 .footer-brand{background:#f3f5ef;border-radius:5px;padding:10px 14px}
 .footer-brand .brand-logo{width:190px}

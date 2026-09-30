@@ -80,7 +80,7 @@
     try {
       const data = new FormData(form);
       data.set('service', service.options[service.selectedIndex].textContent);
-      data.set('_subject', 'New PrairieClear project enquiry');
+      data.set('_subject', 'New A1 Asbestos Buster project enquiry');
       const response = await fetch(endpoint, { method: 'POST', body: data, headers: { 'Accept': 'application/json' }, signal: controller.signal });
       const result = await response.json().catch(() => null);
       if (!response.ok || result?.ok !== true) {
