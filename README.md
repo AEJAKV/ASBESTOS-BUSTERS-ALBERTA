@@ -58,6 +58,8 @@ This is a static website. GitHub and Vercel hosting alone do not provide an emai
 - `about.html` — approach and project principles
 - `faq.html` — nine FAQs and a public Alberta Health Services source
 - `contact.html` — the only enquiry form on the site
+- `blog.html` — blog index listing five upcoming articles, each marked “Coming soon”
+- `blog/*.html` — one placeholder page per upcoming article, with a topic-specific intro, “What this article will cover” list, related service link and related articles. These pages are set to `noindex, follow` so thin placeholder content stays out of search results; switch to `index, follow` when an article is written. The article outlines are drafts to confirm before publishing.
 - `privacy.html` — form data and provider disclosure
 - `404.html` — custom not-found page for Vercel
 
