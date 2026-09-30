@@ -16,4 +16,6 @@
 .footer-brand{background:#f3f5ef;border-radius:5px;padding:10px 14px}
 .footer-brand .brand-logo{width:190px}
 @media(max-width:800px){.brand-logo{width:155px}.footer-brand .brand-logo{width:175px}}
-@media(max-width:540px){.brand-logo{width:140px}.footer-brand .brand-logo{width:165px}}
+@media(max-width:540px){.brand-logo{width:140px}.footer-brand .brand-logo{width:165px}}.service-card .text-link{align-self:flex-start;justify-content:center;gap:10px;min-height:46px;padding:12px 23px;border:1px solid var(--forest);border-radius:var(--radius);color:var(--forest);background:transparent;text-decoration:none;transition:background .2s,color .2s}
+.service-card:hover .text-link,.service-card:focus-visible .text-link{background:var(--forest);color:#fff}
+.service-card:focus-visible{outline:2px solid var(--forest);outline-offset:-4px}
