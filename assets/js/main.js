@@ -89,7 +89,7 @@
         throw new Error(response.status === 429 ? 'Too many attempts. Please wait a few minutes before trying again.' : 'Your enquiry could not be sent. Please try again. Your details are still in the form.');
       }
       form.reset();
-      showStatus('Thank you. Your enquiry has been sent. We’ll reply to the email you provided.');
+      window.location.assign('thank-you.html');
     } catch (error) {
       showStatus(error.name === 'AbortError' ? 'We could not confirm delivery. Please wait before trying again to avoid sending a duplicate enquiry. Your details are still in the form.' : (error instanceof TypeError ? 'We could not confirm delivery. Please check your connection before trying again. Your details are still in the form.' : error.message), true);
     } finally {
