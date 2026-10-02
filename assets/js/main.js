@@ -60,13 +60,13 @@
       message.setCustomValidity('Please describe your project in at least 20 characters.');
     }
     if (!form.reportValidity()) return;
-    if (form.elements._gotcha.value) {
+    if (form.elements.botcheck.value) {
       showStatus('Unable to submit this enquiry. Please reload the page and try again.', true);
       return;
     }
-    const endpoint = window.PRAIRIECLEAR_CONFIG?.formEndpoint || '';
-    // Restrict delivery to the documented provider; prevents accidental arbitrary forwarding.
-    if (!/^https:\/\/formspree\.io\/f\/[a-zA-Z0-9]+$/.test(endpoint)) {
+    const accessKey = window.PRAIRIECLEAR_CONFIG?.web3formsAccessKey || '';
+    const endpoint = 'https://api.web3forms.com/submit';
+    if (!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(accessKey)) {
       showStatus('The enquiry form is not accepting submissions yet. Your message has not been sent. Please try again later.', true);
       return;
     }
@@ -80,10 +80,12 @@
     try {
       const data = new FormData(form);
       data.set('service', service.options[service.selectedIndex].textContent);
-      data.set('_subject', 'New A1 Asbestos Buster project enquiry');
+      data.set('access_key', accessKey);
+      data.set('subject', 'New A1 Asbestos Buster project enquiry');
+      data.set('from_name', 'A1 Asbestos Buster website');
       const response = await fetch(endpoint, { method: 'POST', body: data, headers: { 'Accept': 'application/json' }, signal: controller.signal });
       const result = await response.json().catch(() => null);
-      if (!response.ok || result?.ok !== true) {
+      if (!response.ok || result?.success !== true) {
         throw new Error(response.status === 429 ? 'Too many attempts. Please wait a few minutes before trying again.' : 'Your enquiry could not be sent. Please try again. Your details are still in the form.');
       }
       form.reset();
